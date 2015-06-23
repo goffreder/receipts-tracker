@@ -1,6 +1,6 @@
 {
-  "name": "react-app",
-  "description": "React App",
+  "name": "receipts-tracker",
+  "description": "Receipts Tracker",
   "version": "0.0.1",
   "main": "webpack.config.js",
   "author": "Emanuele Biancardi",
@@ -10,7 +10,7 @@
     "deploy": "NODE_ENV=production webpack -p && npm shrinkwrap",
     "test": "babel-node test/tests.js",
     "check": "npm-check -s",
-    "json-server": "json-server --watch db.json",
+    "json-server": "json-server db.json",
     "lint": "eslint app --ext .js || true"
   },
   "devDependencies": {
@@ -31,8 +31,10 @@
   "dependencies": {
     "axios": "^0.5.4",
     "flux": "^2.0.3",
-    "keymirror": "^0.1.1",
+    "material-ui": "^0.9.2",
+    "normalize-css": "^2.3.1",
     "react": "^0.13.3",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "react-tap-event-plugin": "^0.1.7"
   }
 }

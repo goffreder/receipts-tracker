@@ -1,11 +1,15 @@
-class Test extends React.Component {
-    render() {
-        console.log("Test");
+import 'normalize-css';
 
-        return (
-            <div>It works!</div>
-        );
-    }
-}
+import Router from 'react-router';
+import AppRoutes from './config/routes';
 
-React.render(<Test/>, document.getElementById("app"));
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
+
+Router.create({
+    routes: AppRoutes,
+    scrollBehavior: Router.ScrollToTopBehavior
+}).run((Handler) => {
+    React.render(<Handler/>, document.body);
+});

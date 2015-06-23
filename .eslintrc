@@ -26,12 +26,15 @@
     "jsx": true
   },
   "globals": {
-    "React": true
+    "React": true,
+    "mui": true
   },
   "rules": {
     "strict": [2, "never"],
 
     "no-var": 2,
+    "prefer-const": 2,
+    "object-shorthand": [2, "always"],
 
     "no-shadow": 2,
     "no-shadow-restricted-names": 2,
@@ -65,7 +68,7 @@
     "block-scoped-var": 2,
 
     "consistent-return": 2,
-    "curly": [2, "multi-line"],
+    "curly": [2, "all"],
     "default-case": 2,
     "dot-notation": [2, {
       "allowKeywords": true
@@ -129,6 +132,7 @@
     "new-cap": [2, {
       "newIsCap": true
     }],
+    "newline-after-var": 2,
     "no-multiple-empty-lines": [2, {
       "max": 2
     }],
@@ -139,6 +143,7 @@
     "no-wrap-func": 2,
     "no-underscore-dangle": 0,
     "one-var": [2, "never"],
+    "operator-linebreak": [2, "none"],
     "padded-blocks": [2, "never"],
     "semi": [2, "always"],
     "semi-spacing": [2, {

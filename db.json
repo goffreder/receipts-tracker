@@ -1,3 +1,57 @@
 {
-  "test": []
+  "stores": [
+    {
+      "id": 1,
+      "description": "COOP LIGURIA - Sestri Lev.",
+      "address": "Viale Dante 140, Sestri Levante (GE)",
+      "VAT_id": "00103220091"
+    }
+  ],
+  "receipts": [
+    {
+      "id": 1,
+      "date": "2015-06-20T17:06",
+      "store": 1,
+      "total_gross": 71.35,
+      "total_net": 62.02,
+      "products": [
+        {
+          "id": 0,
+          "label": "FAG CANN COOP G190X3",
+          "price": 1.2
+        },
+        {
+          "id": 0,
+          "label": "CARC.TAGL.COOP 280",
+          "price": 2.74
+        },
+        {
+          "id": 0,
+          "label": "PANE SEGALE DAILY BR",
+          "price": 1.69
+        },
+        {
+          "id": 0,
+          "label": "POM.CILIEGINO ||  B",
+          "price": 3.5
+        },
+        {
+          "id": 0,
+          "label": "CROISSANT PRIVOLAT M",
+          "price": 3.39
+        },
+        {
+          "id": 0,
+          "label": "SUCCO ARANCIA COOP",
+          "price": 1.65
+        },
+        {
+          "id": 0,
+          "label": "MUESLI CIOC/NOC SOLI",
+          "price": 2.65
+        }
+      ]
+    }
+  ],
+  "products": []
 }

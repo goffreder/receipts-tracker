@@ -1,4 +1,7 @@
 var webpack = require('webpack');
+var name = require('./package.json').name;
+var description = require('./package.json').description;
+var version = require('./package.json').version;
 
 module.exports = {
     devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
@@ -31,12 +34,20 @@ module.exports = {
 
     plugins: [
         new webpack.DefinePlugin({
-            'process.env': {
-                'NODE_ENV': '"' + process.env.NODE_ENV + '"'
+            process: {
+                env: {
+                    NODE_ENV: '"' + process.env.NODE_ENV + '"'
+                },
+                appData: {
+                    name: '"' + name + '"',
+                    description: '"' + description + '"',
+                    version: '"' + version + '"'
+                }
             }
         }),
         new webpack.ProvidePlugin({
-            React: "react/addons"
+            React: "react/addons",
+            mui: "material-ui"
         })
     ]
 };
