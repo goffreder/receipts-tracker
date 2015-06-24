@@ -2,9 +2,9 @@ import { Route, DefaultRoute } from 'react-router';
 
 import Main from '../components/Main';
 import Dashboard from '../components/Dashboard';
-import Stores from '../components/Stores';
-import Receipts from '../components/Receipts';
-import Products from '../components/Products';
+import { Stores } from '../components/Wrappers';
+import { Receipts } from '../components/Wrappers';
+import { Products } from '../components/Wrappers';
 
 export default (
     <Route name="root" path="/" handler={Main}>
