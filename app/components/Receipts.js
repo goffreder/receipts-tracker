@@ -1,11 +1,13 @@
+import Griddle from 'griddle-react';
+
 import { Receipt } from '../config/models';
 
 export default class Receipts extends React.Component {
     render() {
-        console.log(this.props.receipts);
+        const columns = [ 'id', 'date', 'store', 'total_gross', 'total_net' ];
 
         return (
-            <div>Receipts</div>
+            <Griddle columns={columns} results={this.props.receipts} />
         );
     }
 }
