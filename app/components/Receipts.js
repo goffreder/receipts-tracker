@@ -1,3 +1,5 @@
+import { Receipt } from '../config/models';
+
 export default class Receipts extends React.Component {
     render() {
         return (
@@ -5,3 +7,7 @@ export default class Receipts extends React.Component {
         );
     }
 }
+
+Receipts.propTypes = {
+    receipts: React.PropTypes.arrayOf(Receipt).isRequired
+};

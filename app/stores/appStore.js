@@ -34,6 +34,18 @@ const appStore = {
 
     getState() {
         return state;
+    },
+
+    getReceipts() {
+        return state.receipts;
+    },
+
+    getStores() {
+        return state.stores;
+    },
+
+    getProducts() {
+        return state.produts;
     }
 };
 

@@ -1,3 +1,5 @@
+import { Product } from '../config/models';
+
 export default class Products extends React.Component {
     render() {
         return (
@@ -5,3 +7,7 @@ export default class Products extends React.Component {
         );
     }
 }
+
+Products.propTypes = {
+    products: React.PropTypes.arrayOf(Product).isRequired
+};
