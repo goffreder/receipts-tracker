@@ -50,15 +50,15 @@ export default class Main extends React.Component {
         const menuItems = [{
             route: 'receipts',
             text: 'Receipts',
-            number: this.state.receipts.length.toString() || null
+            number: this.state.receipts.length.toString()
         }, {
             route: 'products',
             text: 'Products',
-            number: this.state.products.length.toString() || null
+            number: this.state.products.length.toString()
         }, {
             route: 'stores',
             text: 'Stores',
-            number: this.state.stores.length.toString() || null
+            number: this.state.stores.length.toString()
         }];
 
         let title;

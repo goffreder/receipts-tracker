@@ -10,7 +10,7 @@
     "deploy": "NODE_ENV=production webpack -p && npm shrinkwrap",
     "test": "babel-node test/tests.js",
     "check": "npm-check -s",
-    "json-server": "json-server db.json",
+    "json-server": "json-server --watch db.json",
     "lint": "eslint app --ext .js || true"
   },
   "devDependencies": {
