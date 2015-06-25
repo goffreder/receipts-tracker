@@ -10,11 +10,12 @@ export default class Receipts extends React.Component {
             <GriddleWrapper
                 columns={columns}
                 results={this.props.receipts}
+                noDataMessage="No receipts found."
             />
         );
     }
 }
 
 Receipts.propTypes = {
-    receipts: React.PropTypes.arrayOf(Receipt).isRequired
+    receipts: React.PropTypes.arrayOf(Receipt)
 };

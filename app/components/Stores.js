@@ -10,11 +10,12 @@ export default class Stores extends React.Component {
             <GriddleWrapper
                 columns={columns}
                 results={this.props.stores}
+                noDataMessage="No stores found."
             />
         );
     }
 }
 
 Stores.propTypes = {
-    stores: React.PropTypes.arrayOf(Store).isRequired
+    stores: React.PropTypes.arrayOf(Store)
 };

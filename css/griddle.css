@@ -12,7 +12,7 @@
   clear:both;
   display:table;
   width:100%;
-  margin-bottom: 10px;
+  margin: 30px 20px 20px 20px;
 }
 
 .griddle .griddle-filter{
@@ -21,6 +21,15 @@
   text-align:left;
   color:#222;
   min-height:1px;
+}
+
+.griddle .griddle-filter input{
+  -webkit-appearance: none;
+  border: 0;
+  border-bottom: 1px solid #DDD;
+  outline: none;
+  font-weight: lighter;
+  color: rgb(34, 34, 34);
 }
 
 .griddle .griddle-settings-toggle{
@@ -54,24 +63,28 @@
 }
 
 .griddle th{
-  background-color:#EDEDEF;
   border:0px;
   border-bottom:1px solid #DDD;
   color:#222;
-  padding:5px;
+  padding:16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.griddle tr.standard-row:hover{
+  background-color: rgb(238,238,238);
 }
 
 .griddle td{
-  padding:5px;
-  background-color:#FFF;
-  border-top-color:#DDD;
+  padding:16px;
+  border-top: 1px solid #DDD;
   color:#222;
 }
 
 .griddle .footer-container{
-  padding:0px;
-  background-color:#EDEDED;
+  padding:16px;
   border:0px;
+  border-top: 1px solid #DDD;
   color:#222;
 }
 
@@ -82,8 +95,36 @@
   margin-top:5px;
 }
 
+.griddle .griddle-footer button {
+  -webkit-appearance: none;
+  background-color: #FFF;
+  border: 0;
+  outline: 0;
+  color: #222;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.239216) 0px 1px 4px;
+  padding: 0px 16px;
+  line-height: 36px;
+}
+
+.griddle .griddle-footer button:hover {
+  background-color: rgba(0, 0, 0, 0.0784314);
+}
+
+.griddle .griddle-footer button:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
 .griddle .griddle-page{
   text-align:center;
+}
+
+.griddle .griddle-page select {
+  -webkit-appearance: none;
+  border: 0;
+  background-color: #FFF;
+  outline: 0;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .griddle .griddle-next{

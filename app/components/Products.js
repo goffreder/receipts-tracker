@@ -10,11 +10,12 @@ export default class Products extends React.Component {
             <GriddleWrapper
                 columns={columns}
                 results={this.props.products}
+                noDataMessage="No products found."
             />
         );
     }
 }
 
 Products.propTypes = {
-    products: React.PropTypes.arrayOf(Product).isRequired
+    products: React.PropTypes.arrayOf(Product)
 };

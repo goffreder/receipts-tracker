@@ -4,6 +4,8 @@ import Receipt from '../models/Receipt';
 
 import Griddle from 'griddle-react';
 
+const { RaisedButton } = mui;
+
 export default class GriddleWrapper extends React.Component {
     render() {
         const style = {
@@ -16,9 +18,10 @@ export default class GriddleWrapper extends React.Component {
                 <Griddle
                     columns={this.props.columns}
                     results={this.props.results}
-                    resultsPerPage={3}
+                    resultsPerPage={10}
                     useGriddleStyles={false}
                     showFilter={true}
+                    noDataMessage={this.props.noDataMessage}
                 />
             </div>
         );
@@ -31,5 +34,6 @@ GriddleWrapper.propTypes = {
       Store,
       Product,
       Receipt
-    ])).isRequired
+    ])),
+    noDataMessage: React.PropTypes.string
 };
