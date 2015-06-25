@@ -2,6 +2,7 @@
   "name": "receipts-tracker",
   "description": "Receipts Tracker",
   "version": "0.0.1",
+  "repository": "goffreder/receipts-tracker",
   "main": "webpack.config.js",
   "author": "Emanuele Biancardi",
   "license": "MIT",
@@ -14,10 +15,10 @@
     "lint": "eslint app --ext .js || true"
   },
   "devDependencies": {
-    "babel": "^5.5.8",
-    "babel-core": "^5.5.8",
+    "babel": "^5.6.7",
+    "babel-core": "^5.6.7",
     "babel-eslint": "^3.1.15",
-    "babel-loader": "^5.1.4",
+    "babel-loader": "^5.2.2",
     "eslint": "^0.23.0",
     "eslint-loader": "^0.14.0",
     "eslint-plugin-react": "^2.5.2",

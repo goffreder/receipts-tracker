@@ -1,13 +1,16 @@
-import Griddle from 'griddle-react';
+import GriddleWrapper from './GriddleWrapper';
 
-import { Store } from '../config/models';
+import Store from '../models/Store';
 
 export default class Stores extends React.Component {
     render() {
         const columns = [ 'id', 'description', 'address' ];
 
         return (
-            <Griddle columns={columns} results={this.props.stores} />
+            <GriddleWrapper
+                columns={columns}
+                results={this.props.stores}
+            />
         );
     }
 }
