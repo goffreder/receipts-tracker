@@ -130,3 +130,16 @@
 .griddle .griddle-next{
   text-align:right;
 }
+
+.griddle .single-column{
+    width: 50px;
+}
+.griddle .double-column{
+    width: 100px;
+}
+
+.griddle .link-column{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

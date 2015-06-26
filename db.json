@@ -2,170 +2,95 @@
   "stores": [
     {
       "id": 1,
-      "description": "COOP LIGURIA - Sestri Lev.",
+      "name": "COOP LIGURIA - Sestri Lev.",
       "address": "Viale Dante 140, Sestri Levante (GE)",
       "VAT_id": "00103220091"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Fagioli cannellini 3x190g",
+      "brand": "COOP",
+      "picture": "",
+      "link": "http://www.catalogoprodotti.coop.it/pam/it/Categorie-PAM/Alimentari-confezionati/Salse%2C-condimenti-e-scatolame/Conserve-di-verdure-e-legumi-al-naturale/Fagioli-cannellini-3x190g/p/7076029"
     },
     {
       "id": 2,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
+      "name": "Carciofini tagliati 280g",
+      "brand": "COOP",
+      "picture": "",
+      "link": "http://www.catalogoprodotti.coop.it/pam/it/Categorie-PAM/Alimentari-confezionati/Salse%2C-condimenti-e-scatolame/Sottoli---sottaceti-%28contorni%29/Carciofini-tagliati-280g/p/5210600"
     },
     {
       "id": 3,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
+      "name": "Pan di Segale",
+      "brand": "Daily Bread",
+      "picture": "",
+      "link": ""
     },
     {
       "id": 4,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
+      "name": "Pomodorini ciliegino",
+      "brand": "",
+      "picture": "",
+      "link": ""
     },
     {
       "id": 5,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 6,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 7,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 8,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 9,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 10,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 11,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 12,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 13,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 14,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 15,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 16,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 17,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 18,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 19,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
-    },
-    {
-      "id": 20,
-      "description": "COOP LIGURIA - Sestri Lev.",
-      "address": "Viale Dante 140, Sestri Levante (GE)",
-      "VAT_id": "00103220091"
+      "name": "Cornetti con confettura di albicocca Privolat",
+      "brand": "Misura",
+      "picture": "",
+      "link": "http://www.misura.it/prodotto/cornetti-con-confettura-di-albicocca-senza-latte-e-uova"
     }
   ],
   "receipts": [
     {
       "id": 1,
       "date": "2015-06-20T17:06",
-      "store": 1,
+      "storeId": 1,
       "total_gross": 71.35,
       "total_net": 62.02,
-      "products": [
+      "entries": [
         {
-          "id": 0,
+          "productId": 1,
           "label": "FAG CANN COOP G190X3",
-          "price": 1.2
+          "type": "product",
+          "amount": 1.2
         },
         {
-          "id": 0,
+          "productId": 2,
           "label": "CARC.TAGL.COOP 280",
-          "price": 2.74
+          "type": "product",
+          "amount": 2.74
         },
         {
-          "id": 0,
+          "productId": 3,
           "label": "PANE SEGALE DAILY BR",
-          "price": 1.69
+          "type": "product",
+          "amount": 1.69
         },
         {
-          "id": 0,
+          "label": "SCONTO 40% CLIENTI",
+          "type": "discount",
+          "amount": -0.68
+        },
+        {
           "label": "POM.CILIEGINO ||  B",
-          "price": 3.5
+          "type": "product",
+          "amount": 3.5
         },
         {
-          "id": 0,
           "label": "CROISSANT PRIVOLAT M",
-          "price": 3.39
+          "type": "product",
+          "amount": 3.39
         },
         {
-          "id": 0,
-          "label": "SUCCO ARANCIA COOP",
-          "price": 1.65
-        },
-        {
-          "id": 0,
-          "label": "MUESLI CIOC/NOC SOLI",
-          "price": 2.65
+          "label": "SCONTO SCELTO 30%",
+          "type": "discount",
+          "amount": -1.02
         }
       ]
     }
-  ],
-  "products": []
+  ]
 }

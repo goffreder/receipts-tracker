@@ -1,8 +1,8 @@
-import Store from '../models/Store';
-import Product from '../models/Product';
-import Receipt from '../models/Receipt';
-
 import Griddle from 'griddle-react';
+import CurrencyComponent from './griddle-components/CurrencyComponent';
+import DateComponent from './griddle-components/DateComponent';
+import LinkComponent from './griddle-components/LinkComponent';
+import SubGriddleComponent from './griddle-components/SubGriddleComponent';
 
 const { RaisedButton } = mui;
 
@@ -13,10 +13,41 @@ export default class GriddleWrapper extends React.Component {
             width: '80%'
         };
 
+        const columns = this.props.columns || this.props.columnMetadata.filter((meta) => {
+            return meta.visible !== false;
+        }).map((meta) => {
+            return meta.columnName;
+        });
+
+        this.props.columnMetadata.forEach((meta) => {
+            switch (meta.type) {
+                case 'id':
+                    meta.cssClassName = 'single-column';
+                    break;
+                case 'link':
+                    meta.cssClassName = 'link-column';
+                    meta.customComponent = LinkComponent;
+                    break;
+                case 'sub-griddle':
+                    meta.customComponent = SubGriddleComponent;
+                    break;
+                case 'date':
+                    meta.cssClassName = 'double-column';
+                    meta.customComponent = DateComponent;
+                    break;
+                case 'currency':
+                    meta.customComponent = CurrencyComponent;
+                    break;
+                default:
+                    break;
+            }
+        });
+
         return (
             <div style={style}>
                 <Griddle
-                    columns={this.props.columns}
+                    columns={columns}
+                    columnMetadata={this.props.columnMetadata}
                     results={this.props.results}
                     resultsPerPage={10}
                     useGriddleStyles={false}
@@ -29,11 +60,22 @@ export default class GriddleWrapper extends React.Component {
 }
 
 GriddleWrapper.propTypes = {
-    columns: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    results: React.PropTypes.arrayOf(React.PropTypes.oneOfType([
-      Store,
-      Product,
-      Receipt
-    ])),
+    columns: React.PropTypes.arrayOf(React.PropTypes.string),
+    columnMetadata: React.PropTypes.arrayOf(React.PropTypes.shape({
+        columnName: React.PropTypes.string.isRequired,
+        order: React.PropTypes.number,
+        locked: React.PropTypes.bool,
+        cssClassName: React.PropTypes.string,
+        displayName: React.PropTypes.string,
+        customComponent: React.PropTypes.func,
+        type: React.PropTypes.oneOf([
+            'id',
+            'date',
+            'link',
+            'sub-griddle',
+            'currency'
+        ])
+    })).isRequired,
+    results: React.PropTypes.array,
     noDataMessage: React.PropTypes.string
 };

@@ -45,7 +45,7 @@ const appStore = {
     },
 
     getProducts() {
-        return state.produts;
+        return state.products;
     }
 };
 
