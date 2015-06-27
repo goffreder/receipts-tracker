@@ -2,7 +2,8 @@ import { CURRENCY } from '../../constants/constants';
 
 export default class CurrencyComponent extends React.Component {
     render() {
-        const currency = `${this.props.data} ${CURRENCY}`;
+        const value = this.props.data.toFixed(2);
+        const currency = `${value} ${CURRENCY}`;
 
         return (
             <span>{currency}</span>

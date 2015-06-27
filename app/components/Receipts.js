@@ -1,4 +1,5 @@
 import GriddleWrapper from './GriddleWrapper';
+import ReceiptListDialog from './ReceiptListDialog';
 import Receipt from '../models/Receipt';
 
 export default class Receipts extends React.Component {
@@ -17,7 +18,7 @@ export default class Receipts extends React.Component {
         }, {
             columnName: 'entries',
             displayName: 'List',
-            type: 'sub-griddle'
+            customComponent: ReceiptListDialog
         }, {
             columnName: 'total_gross',
             displayName: 'Gross Total',

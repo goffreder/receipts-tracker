@@ -2,7 +2,6 @@ import Griddle from 'griddle-react';
 import CurrencyComponent from './griddle-components/CurrencyComponent';
 import DateComponent from './griddle-components/DateComponent';
 import LinkComponent from './griddle-components/LinkComponent';
-import SubGriddleComponent from './griddle-components/SubGriddleComponent';
 
 const { RaisedButton } = mui;
 
@@ -27,9 +26,6 @@ export default class GriddleWrapper extends React.Component {
                 case 'link':
                     meta.cssClassName = 'link-column';
                     meta.customComponent = LinkComponent;
-                    break;
-                case 'sub-griddle':
-                    meta.customComponent = SubGriddleComponent;
                     break;
                 case 'date':
                     meta.cssClassName = 'double-column';
