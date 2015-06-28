@@ -1,4 +1,5 @@
 import GriddleWrapper from './GriddleWrapper';
+import StoreDetailsDialog from './StoreDetailsDialog';
 
 import Store from '../models/Store';
 
@@ -6,7 +7,6 @@ export default class Stores extends React.Component {
     render() {
         const columnMetadata = [{
             columnName: 'id',
-            displayName: '',
             type: 'id'
         }, {
             columnName: 'name',
@@ -14,12 +14,23 @@ export default class Stores extends React.Component {
         }, {
             columnName: 'address',
             displayName: 'Address'
+        }, {
+            columnName: 'details',
+            header: false,
+            cssClassName: 'double-column',
+            customComponent: StoreDetailsDialog
         }];
+
+        const results = this.props.stores.map((store) => {
+            store.details = 'details';
+
+            return store;
+        });
 
         return (
             <GriddleWrapper
                 columnMetadata={columnMetadata}
-                results={this.props.stores}
+                results={results}
                 noDataMessage="No stores found."
             />
         );

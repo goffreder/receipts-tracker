@@ -64,9 +64,6 @@ export default class Main extends React.Component {
         let title;
 
         switch (true) {
-            case this.context.router.isActive('dashboard'):
-                title = 'Dashboard';
-                break;
             case this.context.router.isActive('stores'):
                 title = 'Stores';
                 break;
@@ -76,6 +73,10 @@ export default class Main extends React.Component {
             case this.context.router.isActive('receipts'):
                 title = 'Receipts';
                 break;
+            case this.context.router.isActive('receipt'):
+                title = 'Edit Receipt';
+                break;
+            case this.context.router.isActive('dashboard'):
             default:
                 title = appData.description;
                 break;

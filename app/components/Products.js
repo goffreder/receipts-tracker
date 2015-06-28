@@ -12,8 +12,7 @@ export default class Products extends React.Component {
             displayName: 'Name'
         }, {
             columnName: 'brand',
-            displayName: 'Brand',
-            cssClassName: 'double-column'
+            displayName: 'Brand'
         }, {
             columnName: 'picture',
             displayName: 'Picture',
@@ -21,7 +20,8 @@ export default class Products extends React.Component {
         }, {
             columnName: 'link',
             displayName: 'Link',
-            type: 'link'
+            type: 'link',
+            visible: false
         }];
 
         return (

@@ -1,5 +1,5 @@
 import GriddleWrapper from './GriddleWrapper';
-import ReceiptListDialog from './ReceiptListDialog';
+import ReceiptDetailsDialog from './ReceiptDetailsDialog';
 import Receipt from '../models/Receipt';
 
 export default class Receipts extends React.Component {
@@ -29,7 +29,7 @@ export default class Receipts extends React.Component {
             columnName: 'entries',
             displayName: 'Details',
             cssClassName: 'double-column',
-            customComponent: ReceiptListDialog,
+            customComponent: ReceiptDetailsDialog,
             header: false
         }];
 
@@ -38,11 +38,13 @@ export default class Receipts extends React.Component {
         });
 
         return (
-            <GriddleWrapper
-                columnMetadata={columnMetadata}
-                results={this.props.receipts}
-                noDataMessage="No receipts found."
-            />
+            <div>
+                <GriddleWrapper
+                    columnMetadata={columnMetadata}
+                    results={this.props.receipts}
+                    noDataMessage="No receipts found."
+                />
+            </div>
         );
     }
 }
