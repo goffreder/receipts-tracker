@@ -6,7 +6,6 @@ export default class Receipts extends React.Component {
     render() {
         const columnMetadata = [{
             columnName: 'id',
-            displayName: '',
             type: 'id'
         }, {
             columnName: 'date',
@@ -16,19 +15,22 @@ export default class Receipts extends React.Component {
             columnName: 'storeName',
             displayName: 'Store'
         }, {
-            columnName: 'entries',
-            displayName: 'List',
-            customComponent: ReceiptListDialog
-        }, {
             columnName: 'total_gross',
             displayName: 'Gross Total',
             cssClassName: 'double-column',
-            type: 'currency'
+            type: 'currency',
+            visible: false
         }, {
             columnName: 'total_net',
             displayName: 'Net Total',
             cssClassName: 'double-column',
             type: 'currency'
+        }, {
+            columnName: 'entries',
+            displayName: 'Details',
+            cssClassName: 'double-column',
+            customComponent: ReceiptListDialog,
+            header: false
         }];
 
         this.props.receipts.forEach((receipt) => {

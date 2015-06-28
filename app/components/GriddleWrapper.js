@@ -22,6 +22,7 @@ export default class GriddleWrapper extends React.Component {
             switch (meta.type) {
                 case 'id':
                     meta.cssClassName = 'single-column';
+                    meta.header = false;
                     break;
                 case 'link':
                     meta.cssClassName = 'link-column';
@@ -36,6 +37,10 @@ export default class GriddleWrapper extends React.Component {
                     break;
                 default:
                     break;
+            }
+
+            if (meta.header === false) {
+                meta.cssClassName += ' hidden-header';
             }
         });
 

@@ -3,7 +3,7 @@ import CurrencyComponent from './griddle-components/CurrencyComponent';
 
 import { LOCALE, CURRENCY } from '../constants/constants';
 
-const { Dialog } = mui;
+const { Dialog, RaisedButton } = mui;
 
 export default class ReceiptListDialog extends React.Component {
     constructor(props) {
@@ -58,7 +58,7 @@ export default class ReceiptListDialog extends React.Component {
                         showFilter={true}
                     />
                 </Dialog>
-                <a href="#" onClick={this.handleDialogShow}>Show list</a>
+                <RaisedButton label="Details" secondary={true} onClick={this.handleDialogShow} />
             </div>
         );
     }
