@@ -1,4 +1,5 @@
-import 'normalize-css';
+import 'normalize-css/normalize.css';
+import './styles/css/griddle.css';
 
 import Router from 'react-router';
 import AppRoutes from './config/routes';

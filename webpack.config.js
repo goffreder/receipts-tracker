@@ -1,12 +1,48 @@
+/*eslint-disable no-var */
+
 var webpack = require('webpack');
 var name = require('./package.json').name;
 var description = require('./package.json').description;
 var version = require('./package.json').version;
 
-module.exports = {
-    devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
+var ReactStylePlugin = require('react-style-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-    entry: "./app/App.js",
+var useReactStyleWebpackPlugin = !true;
+
+var preLoaders = {
+    jsx: {
+        test: /\.jsx?$/,
+        loader: 'eslint-loader'
+    }
+};
+
+var loaders = {
+    jsx: {
+        test: /\.jsx?$/,
+        exclude: /node_modules[\/\\]/,
+        loaders: [
+            'babel-loader?optional[]=es7.decorators'
+        ]
+    },
+    css: {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    },
+    icon: {
+        test: /\.(eot|woff2|ttf|svg|woff)$/,
+        loader: 'url-loader'
+    }
+};
+
+if (useReactStyleWebpackPlugin) {
+    loaders.jsx.loaders.push(ReactStylePlugin.loader());
+}
+
+module.exports = {
+    devtool: process.env.NODE_ENV !== 'production' ? 'eval' : null,
+
+    entry: './app/App.js',
 
     output: {
         path: '__build__',
@@ -15,21 +51,12 @@ module.exports = {
     },
 
     module: {
-        preLoaders: [{
-            test: /\.js$/,
-            loader: 'eslint-loader'
-        }],
-        loaders: [{
-            test: /\.js$/,
-            exclude: /node_modules[\/\\]/,
-            loader: 'babel-loader?optional[]=es7.decorators'
-        }, {
-            test: /\.css$/,
-            loader: "style!css"
-        }, {
-            test: /\.(eot|woff2|ttf|svg|woff)$/,
-            loader: 'url-loader'
-        }]
+        preLoaders: [ preLoaders.jsx ],
+        loaders: [
+            loaders.jsx,
+            loaders.css,
+            loaders.icon
+        ]
     },
 
     plugins: [
@@ -45,9 +72,17 @@ module.exports = {
                 }
             }
         }),
+        useReactStyleWebpackPlugin ? new ReactStylePlugin('build.css') : new ExtractTextPlugin('build.css'),
         new webpack.ProvidePlugin({
-            React: "react/addons",
-            mui: "material-ui"
+            mui: 'material-ui',
+            React: 'react/addons',
+            StyleSheet: 'react-style'
         })
-    ]
+    ],
+
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    }
 };
+
+/*eslint-enable no-var */
